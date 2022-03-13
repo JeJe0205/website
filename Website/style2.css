@@ -1,3 +1,4 @@
+/*Collage*/
 .collagePhoto{
 	border: 1px solid white;
 }
@@ -45,9 +46,6 @@
 	z-index: 8;
 }
 
-
-
-
 :root {
 	--primary-color: white;
 	--secondary-color: green;
@@ -60,9 +58,6 @@
 	--footer-color: green;
 }
 
-h3{
-	text-decoration: underline;
-}
 
 @media only screen and (max-width: 600px) {
 	nav li {
@@ -115,6 +110,8 @@ h3{
 }
 
 /* Bilder */
+
+
 figure.fullwidth img {
 	width: 100% !important;
 }
@@ -150,26 +147,7 @@ figure:hover figcaption {
 	display: block;
 	background:rgba(0, 0, 0, 0.6);
 }
-#bild_links{
-	width: 100%;
-}
-.bild_schoen{
-	margin-right: 2%;
-	float: left;
-	width: 50%;
-}
-#text_unten_bei_kap1{
-	width: 100%;
-}
-#bubble_sort{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-#bubble_sort_text{
-	text-align: center;
-}
+
 
 /* wrapperlayout */
 html,
@@ -322,106 +300,58 @@ p {
 	color: var(--text-color)
 }
 
-
-/* Personenkarten */
-
-.card-wrapper {
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-	justify-content: space-around;
+h3{
+	text-decoration: underline;
 }
-
-.card {
-	border-radius: 5px;
-	background-color: var(--nav-color);
-	transition: all 0.5s;
-	flex-grow: 1;
-	
-	min-height: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.5s;
-	width: 30%;
-}
-
-.card .profil {
-	width: 40%;
-
-	aspect-ratio: 1;
-	border-radius: 100%;
-	border: 1px solid gray;
-	margin-bottom: 30px;
-	transition: all 0.5s;
-	outline: 10px solid rgba(0,0,0,0);
-}
-
-.card .profil:hover {
-	outline: 10px solid #446FA0;
-}
-
-.card .social-media {
-	justify-self: flex-end;
-	align-self: flex-end;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: calc(100% - 10px);
-	margin: 0;
-	height: 0;
-	padding: 5px;
-	display: none;
-	transition: height 0.5s;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	color: white;
-}
-.card .social-media img {
-	width: 2em;
-	height: 2em;	
-	opacity: 50%;
-}
-
-.card:hover {
-	box-shadow: 5px 4px 6px 0px rgb(114, 114, 114);
-	transform: scale(1.05);
-	box-shadow: inset 0px 0px 0px 8px var(--header-color);
-}
-
-.card:hover .social-media {
-	background-color: var(--footer-color);
-	height: 10%;
-	display: block;
-}
-.card .social-media img:hover {
-	opacity: 100%;
-}
-
-.card span {
-	display: block;
-}
-
-.card .name {
-	color: white;
-	font-size: 1.2em;
-}
-
-.card .role {
-	color: lightblue;
-	font-size: 1em;
-}
-
 
 /* Kontaktformular */
-form {
-	color: white;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(255, 255, 255); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #2c9932;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
 }
 
+.feedback-input:focus { border:2px solid  #2c9932 c5f; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#2c9932;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
 
 
 /* lsd */
@@ -447,85 +377,3 @@ body.lsd * {
 	}
 }
 
-
-/* Form */
-form {
-    background-color: var(--nav-color);
- 
-    padding: 20px;
-	width: 60%;
-  
-}
-
-form > ul {
-    list-style-type: none;
-    padding: 0;
-	margin: 0;
-}
-
-.form-row {
-    display: flex;
-    justify-content: flex-end;
-    padding: .5em;
-}
-
-.form-row > label {
-    padding: .5em 1em .5em 0;
-    flex: 1;
-}
-
-.form-row > input,
-.form-row > button {
-    padding: .5em;
-}
-.form-row > button {
-    background-color: orange;
-    color: white;
-    border: 0;
-}
-
-
-.form-row > textarea {
-    height: 250px;
-    resize: vertical;
-    max-height: 100%;
-	width: 100%;
-}
-
-form input {
-	border: none;
-}
-
-input.error {
-    background-color: rgb(255, 131, 131);
-}
-
-.error input,.error textarea {
-	background-color: rgb(240, 176, 175);
-}
-
-.container {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.confirmation {
-	background-color: #789bc3;
-	border-radius: 3px;
-	padding: 10px;
-}
-
-.confirmation h2 {
-	color: black;
-}
-
-.confirmation table {
-	width: 100%;
-}
-
-.confirmation th,.confirmation td {
-	text-align: left;
-}
